@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- 
+    //who is creating instance of Dog? programmer
+		Dog dog=new Dog();
+		//who is setting the state of the dog ? programmer
+		dog.setColor("white");
+		dog.setName("Tommy");
+		dog.setTail(2);
+		 -->
+   <!-- Who is creating instance of dog here???? spring container ->>
+        object created by spring container is known as bean
+    -->		 
+  <bean id="dog" class="com.animal.Dog">
+     <property name="name" value="Tommy"/>
+     <property name="color" value="white"/>
+     <property name="tail" value="2"/>
+  </bean>		
+  
+  
+   <bean id="magicDog" class="com.animal.Dog">
+     <property name="name" value="Amoga"/>
+     <property name="color" value="pink"/>
+     <property name="tail" value="5"/>
+  </bean>	 
+        
+        
+ </beans>       
