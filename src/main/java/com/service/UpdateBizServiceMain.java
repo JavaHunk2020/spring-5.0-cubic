@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UpdateBizServiceMain {
@@ -12,7 +13,7 @@ public class UpdateBizServiceMain {
 
 		// Creating spring container
 		ApplicationContext context = new 
-				ClassPathXmlApplicationContext("biz-service.xml");
+				AnnotationConfigApplicationContext("com.service");
 		//reading biz-service.xml and creating bean of BizService
 		
 		//Accessing bean of BizService type from spring container
